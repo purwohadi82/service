@@ -1,0 +1,266 @@
+CRITICAL - 2026-11-15 17:34:25 --> Error: Class "CodeIgniter\Filters\Filter" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\AuthFilter.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(338): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(318): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\service\\app\\Filters\\AuthFilter.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(294): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\AuthFilter')
+ 4 SYSTEMPATH\Filters\Filters.php(297): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\AuthFilter')
+ 5 SYSTEMPATH\Filters\Filters.php(237): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 6 SYSTEMPATH\Filters\Filters.php(219): CodeIgniter\Filters\Filters->runBefore([...])
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\Filters\Filters->run('login', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-15 17:34:46 --> Error: Class "CodeIgniter\Filters\Filter" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\AuthFilter.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(338): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(318): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\service\\app\\Filters\\AuthFilter.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(294): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\AuthFilter')
+ 4 SYSTEMPATH\Filters\Filters.php(297): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\AuthFilter')
+ 5 SYSTEMPATH\Filters\Filters.php(237): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 6 SYSTEMPATH\Filters\Filters.php(219): CodeIgniter\Filters\Filters->runBefore([...])
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\Filters\Filters->run('login', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-15 17:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-15 17:37:32 --> Not unique table/alias: 'service'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = :service.user_id:
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dashboard.php(47): App\Models\ServiceModel->monitoring(1, [])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-15 17:37:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'service'
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = :service.user_id:
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dashboard.php(47): App\Models\ServiceModel->monitoring(1, [])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-15 17:37:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'service'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = :service.user_id:
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dashboard.php(47): App\Models\ServiceModel->monitoring(1, [])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-15 17:37:32 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'service'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = 1
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `service`.*, `k`.`merk`, `k`.`tipe`, `k`.`no_pol`, `k`.`jenis`, `b`.`nama` AS `nama_bengkel`
+FROM (`service`, `service`)
+JOIN `kendaraan` `k` ON `k`.`id` = `service`.`kendaraan_id`
+LEFT JOIN `bengkel` `b` ON `b`.`id` = `service`.`bengkel_id`
+WHERE `service`.`user_id` = :service.user_id:
+ORDER BY `service`.`tanggal` DESC, `service`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dashboard.php(47): App\Models\ServiceModel->monitoring(1, [])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-15 17:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 17:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-15 18:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

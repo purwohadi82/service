@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Larang akses langsung ke folder inti aplikasi
+    RewriteRule ^(app|system|vendor|writable|tests|database)/ - [F,L]
+
+    # Arahkan semua request ke folder public/
+    RewriteCond %{REQUEST_URI} !^/service/public/
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>
+
+Options -Indexes
